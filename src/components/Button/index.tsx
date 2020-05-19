@@ -3,10 +3,14 @@ import { Text, TouchableOpacity } from 'react-native';
 
 import styles from './styles';
 
-const Button: React.FC = (props) => {
+interface Props {
+	submit: Function;
+}
+
+const Button: React.FC<Props> = ({ children, submit }) => {
 	return (
-		<TouchableOpacity style={styles.container}>
-			<Text style={styles.buttonText}>{props.children}</Text>
+		<TouchableOpacity style={styles.container} onPress={() => submit()}>
+			<Text style={styles.buttonText}>{children}</Text>
 		</TouchableOpacity>
 	);
 };
