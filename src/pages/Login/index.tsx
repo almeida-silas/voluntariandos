@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity } from 'react-native';
+import { View, TextInput } from 'react-native';
+
+import { useNavigation } from '@react-navigation/native';
+
+import { useAuth } from '../../hooks/auth';
 
 import Button from '../../components/Button';
 import styles from './styles';
@@ -7,7 +11,14 @@ import styles from './styles';
 const Login: React.FC = () => {
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
-	const [Authenticated, setAuthenticated] = useState(false);
+
+	const { signIn } = useAuth();
+	const navigate = useNavigation();
+
+	const handdleLogin = async () => {
+		const response = await signIn({ email, password });
+		alert(response);
+	};
 
 	return (
 		<View style={styles.container}>
@@ -25,7 +36,7 @@ const Login: React.FC = () => {
 				value={password}
 				onChangeText={setPassword}
 			/>
-			<Button>Entrar</Button>
+			<Button submit={handdleLogin}>Entrar</Button>
 		</View>
 	);
 };

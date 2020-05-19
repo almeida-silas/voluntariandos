@@ -25,7 +25,7 @@ const Register2: React.FC = () => {
 				placeholder='Informe sua experiências Profissionais'
 			/>
 
-			<Button>Concluir</Button>
+			<Button submit={() => {}}>Concluir</Button>
 		</View>
 	);
 };

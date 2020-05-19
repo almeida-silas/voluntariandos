@@ -28,7 +28,7 @@ const Register: React.FC = () => {
 
 			<TextInput style={styles.input} placeholder='Informe seu Telefone' />
 
-			<Button>Continar</Button>
+			<Button submit={navigateToRegister2}>Continar</Button>
 		</View>
 	);
 };

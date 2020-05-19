@@ -18,8 +18,8 @@ const Main: React.FC = () => {
 
 	return (
 		<View style={styles.container}>
-			<Button>Login</Button>
-			<Button>Inscrever-se</Button>
+			<Button submit={navigateToLogin}>Login</Button>
+			<Button submit={navigateToRegister}>Inscrever-se</Button>
 		</View>
 	);
 };
