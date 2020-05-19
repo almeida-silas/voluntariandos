@@ -9,7 +9,7 @@ import Register2 from '../pages/Register/Register2';
 
 const StackNavigaton = createStackNavigator();
 
-const AuthRoutes = () => {
+const AuthRoutes: React.FC = () => {
 	return (
 		<StackNavigaton.Navigator screenOptions={{ headerShown: false }}>
 			<StackNavigaton.Screen name='Main' component={Main} />
