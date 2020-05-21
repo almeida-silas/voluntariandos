@@ -6,21 +6,21 @@ import Button from '../../components/Button';
 import styles from './styles';
 
 const Main: React.FC = () => {
-	const navigation = useNavigation();
+  const navigation = useNavigation();
 
-	const navigateToLogin = () => {
-		navigation.navigate('Login');
-	};
+  const navigateToLogin = () => {
+    navigation.navigate('Login');
+  };
 
-	const navigateToRegister = () => {
-		navigation.navigate('Register');
-	};
+  const navigateToRegister = () => {
+    navigation.navigate('Register');
+  };
 
-	return (
-		<View style={styles.container}>
-			<Button submit={navigateToLogin}>Login</Button>
-			<Button submit={navigateToRegister}>Inscrever-se</Button>
-		</View>
-	);
+  return (
+    <View style={styles.container}>
+      <Button submit={navigateToLogin}>Login</Button>
+      <Button submit={navigateToRegister}>Inscrever-se</Button>
+    </View>
+  );
 };
 export default Main;

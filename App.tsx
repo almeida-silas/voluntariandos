@@ -7,13 +7,13 @@ import { AuthProvider } from './src/context/context';
 import Routes from './src/routes';
 
 const App: React.FC = () => {
-	return (
-		<NavigationContainer>
-			<AuthProvider>
-				<Routes />
-			</AuthProvider>
-		</NavigationContainer>
-	);
+  return (
+    <NavigationContainer>
+      <AuthProvider>
+        <Routes />
+      </AuthProvider>
+    </NavigationContainer>
+  );
 };
 
 export default App;
