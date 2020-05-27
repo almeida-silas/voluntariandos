@@ -6,9 +6,9 @@ import AuthRoutes from './auth.routes';
 import { useAuth } from '../hooks/auth';
 
 const Routes: React.FC = () => {
-	const { signed } = useAuth();
+  const { signed } = useAuth();
 
-	return signed ? <AppRoutes /> : <AuthRoutes />;
+  return signed ? <AppRoutes /> : <AuthRoutes />;
 };
 
 export default Routes;

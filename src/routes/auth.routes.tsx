@@ -10,14 +10,14 @@ import Register2 from '../pages/Register/Register2';
 const StackNavigaton = createStackNavigator();
 
 const AuthRoutes: React.FC = () => {
-	return (
-		<StackNavigaton.Navigator screenOptions={{ headerShown: false }}>
-			<StackNavigaton.Screen name='Main' component={Main} />
-			<StackNavigaton.Screen name='Login' component={Login} />
-			<StackNavigaton.Screen name='Register' component={Register} />
-			<StackNavigaton.Screen name='Register2' component={Register2} />
-		</StackNavigaton.Navigator>
-	);
+  return (
+    <StackNavigaton.Navigator screenOptions={{ headerShown: false }}>
+      <StackNavigaton.Screen name="Main" component={Main} />
+      <StackNavigaton.Screen name="Login" component={Login} />
+      <StackNavigaton.Screen name="Register" component={Register} />
+      <StackNavigaton.Screen name="Register2" component={Register2} />
+    </StackNavigaton.Navigator>
+  );
 };
 
 export default AuthRoutes;

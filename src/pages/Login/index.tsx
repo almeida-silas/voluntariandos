@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, TextInput, Text, Alert } from 'react-native';
+import { View, TextInput } from 'react-native';
 
 import { useNavigation } from '@react-navigation/native';
 
@@ -19,7 +19,7 @@ const Login: React.FC = () => {
     const response = await signIn({ email, password });
 
     if (!response) {
-      return alert('Email ou senha incorreto!');
+      return;
     }
 
     return navigate.navigate('Register');
