@@ -1,21 +1,21 @@
 import { StyleSheet } from 'react-native';
 
+import colors from '../../styles/colors';
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
+    paddingTop: 20,
+    paddingBottom: '10%',
     alignItems: 'center',
-    backgroundColor: '#333',
-    padding: 20,
+    backgroundColor: colors.primary,
   },
-  input: {
-    height: 45,
-    backgroundColor: '#FFF',
-    alignSelf: 'stretch',
-    borderColor: '#EEE',
-    borderWidth: 1,
-    paddingHorizontal: 20,
-    marginBottom: 10,
+  containerRegister: {},
+  containerBottom: {
+    bottom: 0,
+    position: 'absolute',
+    flexDirection: 'row',
+    alignItems: 'flex-end',
   },
 });
 
