@@ -10,6 +10,7 @@ interface Props {
   placeholder?: string;
   secureText?: boolean;
   spellCheck?: boolean;
+  maxLength?: number;
 }
 
 const Input: React.FC<Props> = ({
@@ -19,10 +20,11 @@ const Input: React.FC<Props> = ({
   secureText,
   spellCheck,
   label,
+  maxLength,
 }) => {
   return (
     <View style={styles.container}>
-      <Text style={styles.label}>{label}</Text>
+      {label ? <Text style={styles.label}>{label}</Text> : null}
 
       <View style={styles.containerInput}>
         <TextInput
@@ -30,7 +32,8 @@ const Input: React.FC<Props> = ({
           value={value}
           onChangeText={onChange}
           placeholder={placeholder}
-          placeholderTextColor="#FFFF"
+          maxLength={maxLength}
+          placeholderTextColor="#979797"
           secureTextEntry={secureText}
           spellCheck={spellCheck}
         />
