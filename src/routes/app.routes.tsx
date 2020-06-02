@@ -5,8 +5,10 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 
 import Feed from '../pages/Feed';
 import Maps from '../pages/Maps';
+import Talk from '../pages/Talk';
 
 import DrawerContent from '../utils/DrawerContent';
+import Appbar from '../utils/Appbar';
 
 const DrawerNavigator = createDrawerNavigator();
 const TabNavigator = createMaterialBottomTabNavigator();
@@ -14,6 +16,8 @@ const TabNavigator = createMaterialBottomTabNavigator();
 const Home: React.FC = () => {
   return (
     <React.Fragment>
+      <Appbar />
+
       <TabNavigator.Navigator
         initialRouteName="Feed"
         backBehavior="initialRoute"
@@ -27,10 +31,24 @@ const Home: React.FC = () => {
           }}
         />
         <TabNavigator.Screen
+          name="Conversas"
+          component={Talk}
+          options={{
+            tabBarIcon: 'chat',
+          }}
+        />
+        <TabNavigator.Screen
           name="Mapa"
           component={Maps}
           options={{
             tabBarIcon: 'map',
+          }}
+        />
+        <TabNavigator.Screen
+          name="Nop"
+          component={Feed}
+          options={{
+            tabBarIcon: 'not',
           }}
         />
       </TabNavigator.Navigator>
