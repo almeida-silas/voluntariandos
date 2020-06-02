@@ -3,7 +3,7 @@ import AsyncStorage from '@react-native-community/async-storage';
 
 import { api } from '../services/auth';
 
-interface AuthContextData {
+interface IAuthContextData {
   signed: boolean;
   user: object | null;
   signIn(user: IUser): Promise<boolean>;
@@ -15,13 +15,13 @@ export interface IUser {
   password: string;
 }
 
-const AuthContext = createContext<AuthContextData>({} as AuthContextData);
+const AuthContext = createContext<IAuthContextData>({} as IAuthContextData);
 
 export const AuthProvider: React.FC = ({ children }) => {
   const [user, setUser] = useState<IUser | null>(null);
 
   const signIn = async (userLogin: IUser) => {
-    if (userLogin?.email && userLogin.password) {
+    if (userLogin.email && userLogin.password) {
       const response = api;
 
       try {
