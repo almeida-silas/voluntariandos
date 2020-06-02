@@ -5,17 +5,18 @@ import colors from '../../styles/colors';
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingTop: 20,
-    paddingBottom: '10%',
     alignItems: 'center',
     backgroundColor: colors.primary,
   },
-  containerRegister: {},
+  carousel: {
+    marginTop: 20,
+    height: '50%',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
   containerBottom: {
-    bottom: 0,
-    position: 'absolute',
-    flexDirection: 'row',
-    alignItems: 'flex-end',
+    bottom: -10,
+    width: '100%',
   },
 });
 

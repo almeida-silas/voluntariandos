@@ -15,6 +15,9 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     borderColor: colors.light,
   },
+  div: {
+    marginTop: '17%',
+  },
   containerRegister: {
     color: colors.light,
     flexDirection: 'row',
@@ -31,13 +34,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   containerBottom: {
-    position: 'absolute',
-    flex: 0.1,
-    left: 0,
-    right: 0,
     bottom: -10,
-    height: 50,
-    flexDirection: 'row',
+    width: '100%',
   },
 });
 

@@ -1,9 +1,10 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { View } from 'react-native';
 
 import { useNavigation } from '@react-navigation/native';
 
 import Button from '../../../components/Button';
+import Datapicker from '../../../components/Datapicker';
 import Input from '../../../components/Input';
 import styles from './styles';
 
@@ -16,12 +17,18 @@ const Register2: React.FC = () => {
 
   return (
     <View style={styles.container}>
-      <Text />
+      <Datapicker label="Data de nascimento" />
 
-      <Input placeholder="Informe a Data de Nascimento" />
-      <Input placeholder="Informe seu CPF" />
-      <Input placeholder="Informe sua Área de interesse" />
-      <Input placeholder="Informe sua experiências Profissionais" />
+      <Input label="CPF" placeholder="000.000.000-00" />
+
+      <Input
+        label="Área de interesse"
+        placeholder="Informe sua Área de interesse"
+      />
+      <Input
+        label="Experiências Profissionais"
+        placeholder="Conte sobre as suas experiências profissionais"
+      />
 
       <View style={styles.containerButtons}>
         <Button submit={navigateBack}>Voltar</Button>

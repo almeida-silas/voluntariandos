@@ -1,9 +1,8 @@
 import React from 'react';
-import { View, ScrollView, TouchableOpacity } from 'react-native';
+import { View, ScrollView } from 'react-native';
 
 import Card from '../../components/Card';
 import styles from './styles';
-import Input from '../../components/Input';
 
 const image = {
   uri:
@@ -13,12 +12,6 @@ const image = {
 const Feed: React.FC = () => {
   return (
     <ScrollView style={styles.container}>
-      <View style={styles.containerTop}>
-        <Input placeholder="Pesquise uma instituição" />
-
-        <TouchableOpacity />
-      </View>
-
       <View style={styles.cardsBody}>
         <Card
           imageProfile={image}
@@ -44,6 +37,20 @@ const Feed: React.FC = () => {
           navigateTo="Maps"
         />
 
+        <Card
+          imageProfile={image}
+          name="Orn Mart"
+          description="A new volunter"
+          content="SAdasd"
+          navigateTo="Maps"
+        />
+        <Card
+          imageProfile={image}
+          name="Orn Mart"
+          description="A new volunter"
+          content="SAdasd"
+          navigateTo="Maps"
+        />
         <Card
           imageProfile={image}
           name="Orn Mart"

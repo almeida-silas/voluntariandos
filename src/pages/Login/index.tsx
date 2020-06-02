@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, TouchableOpacity } from 'react-native';
 
 import { useNavigation } from '@react-navigation/native';
 
@@ -10,7 +10,6 @@ import Button from '../../components/Button';
 import Input from '../../components/Input';
 import ContainerLink from '../../components/ContainerLink';
 import styles from './styles';
-import { TouchableOpacity } from 'react-native-gesture-handler';
 
 const Login: React.FC = () => {
   const [email, setEmail] = useState('');
@@ -20,22 +19,23 @@ const Login: React.FC = () => {
   const navigate = useNavigation();
 
   const handdleLogin = async () => {
-    const response = await signIn({ email, password });
+    await signIn({ email, password });
+  };
 
-    if (!response) {
-      return;
-    }
-
-    return navigate.navigate('Register');
+  const navigateToRegister = () => {
+    navigate.navigate('Register');
   };
 
   return (
     <View style={styles.container}>
       <Logo />
 
+      <View style={styles.div} />
+
       <Input
         label="E-mail"
         value={email}
+        maxLength={250}
         onChange={setEmail}
         placeholder="email@example.com"
       />
@@ -43,16 +43,18 @@ const Login: React.FC = () => {
       <Input
         label="Senha"
         value={password}
+        maxLength={80}
         secureText={true}
         onChange={setPassword}
         placeholder="*********"
       />
+
       <Button submit={handdleLogin}>Entrar</Button>
 
       <View style={styles.containerRegister}>
         <Text style={styles.textRegister}>Não Tem uma conta? </Text>
 
-        <TouchableOpacity>
+        <TouchableOpacity onPress={navigateToRegister}>
           <Text style={styles.textButton}>Registrar-se</Text>
         </TouchableOpacity>
       </View>
