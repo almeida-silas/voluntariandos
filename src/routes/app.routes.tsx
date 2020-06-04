@@ -6,9 +6,13 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import Feed from '../pages/Feed';
 import Maps from '../pages/Maps';
 import Talk from '../pages/Talk';
+import Institutions from '../pages/Institutions';
 
 import DrawerContent from '../utils/DrawerContent';
 import Appbar from '../utils/Appbar';
+
+import colors from '../styles/colors';
+import styles from '../styles/barStyle';
 
 const DrawerNavigator = createDrawerNavigator();
 const TabNavigator = createMaterialBottomTabNavigator();
@@ -22,33 +26,39 @@ const Home: React.FC = () => {
         initialRouteName="Feed"
         backBehavior="initialRoute"
         shifting={true}
+        activeColor={colors.gray2}
+        barStyle={styles.container}
         sceneAnimationEnabled={false}>
         <TabNavigator.Screen
-          name="Notícias"
+          name="Feed"
           component={Feed}
           options={{
+            title: 'Notícias',
             tabBarIcon: 'rss',
           }}
         />
         <TabNavigator.Screen
-          name="Conversas"
+          name="talk"
           component={Talk}
           options={{
+            title: 'Conversas',
             tabBarIcon: 'chat',
           }}
         />
         <TabNavigator.Screen
-          name="Mapa"
+          name="Map"
           component={Maps}
           options={{
+            title: 'Mapa',
             tabBarIcon: 'map',
           }}
         />
         <TabNavigator.Screen
-          name="Nop"
-          component={Feed}
+          name="Institutions"
+          component={Institutions}
           options={{
-            tabBarIcon: 'not',
+            title: 'Instituições',
+            tabBarIcon: 'home',
           }}
         />
       </TabNavigator.Navigator>
