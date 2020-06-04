@@ -5,8 +5,7 @@ import Card from '../../components/Card';
 import styles from './styles';
 
 const image = {
-  uri:
-    'https://cdn.icon-icons.com/icons2/582/PNG/512/doctor_icon-icons.com_55045.png',
+  uri: '',
 };
 
 const Feed: React.FC = () => {
