@@ -3,13 +3,17 @@ import colors from '../../styles/colors';
 
 const styles = StyleSheet.create({
   containerTop: {
-    backgroundColor: colors.primary,
-    borderColor: colors.gray2,
     borderBottomWidth: 1,
+    borderColor: colors.gray2,
+    backgroundColor: colors.primary,
+    justifyContent: 'space-between',
   },
   icon: {
     color: colors.light,
     fontSize: 22,
+  },
+  input: {
+    width: '75%',
   },
 });
 

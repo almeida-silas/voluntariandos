@@ -14,7 +14,7 @@ const DrawerContent: React.FC<IProps> = (props) => {
   const { signOut } = useAuth();
 
   return (
-    <DrawerContentScrollView {...props} style={styles.container}>
+    <DrawerContentScrollView {...props}>
       <Avatar.Image
         accessibilityStates
         style={styles.avatar}

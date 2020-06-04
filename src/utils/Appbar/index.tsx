@@ -11,11 +11,12 @@ const Appbar: React.FC = () => {
 
   return (
     <AppbarModal.Header accessibilityStates style={styles.containerTop}>
-      <AppbarModal.Content title="Voluntariandos" accessibilityStates />
       <AppbarModal.Action
-        icon={() => <Icon name="search" style={styles.icon} />}
+        icon={() => <Icon name="menu" style={styles.icon} />}
+        onPress={() => {}}
         accessibilityStates
       />
+
       <AppbarModal.Action
         icon={() => <Icon name="log-out" style={styles.icon} />}
         onPress={signOut}

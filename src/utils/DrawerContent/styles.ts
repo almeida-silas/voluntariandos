@@ -2,17 +2,15 @@ import { StyleSheet } from 'react-native';
 import colors from '../../styles/colors';
 
 const styles = StyleSheet.create({
-  container: {},
-  section: {},
+  avatar: {
+    marginTop: 15,
+    marginLeft: 15,
+  },
   itens: {
     color: colors.light,
     borderColor: colors.light,
     borderBottomWidth: 1.1,
     marginBottom: 10,
-  },
-  avatar: {
-    marginTop: 15,
-    marginLeft: 15,
   },
   title: {
     fontSize: 17,
