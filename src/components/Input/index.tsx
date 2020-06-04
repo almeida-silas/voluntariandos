@@ -1,7 +1,9 @@
 import React from 'react';
-import { TextInput, Text, View } from 'react-native';
+import { View } from 'react-native';
+import { TextInput } from 'react-native-paper';
 
 import styles from './styles';
+import colors from '../../styles/colors';
 
 interface Props {
   onChange?(text: string): void;
@@ -11,6 +13,7 @@ interface Props {
   secureText?: boolean;
   spellCheck?: boolean;
   maxLength?: number;
+  maks?: string | undefined;
 }
 
 const Input: React.FC<Props> = ({
@@ -24,16 +27,16 @@ const Input: React.FC<Props> = ({
 }) => {
   return (
     <View style={styles.container}>
-      {label ? <Text style={styles.label}>{label}</Text> : null}
-
       <View style={styles.containerInput}>
         <TextInput
-          style={styles.input}
+          accessibilityStates
+          label={label}
           value={value}
           onChangeText={onChange}
+          style={styles.input}
           placeholder={placeholder}
           maxLength={maxLength}
-          placeholderTextColor="#979797"
+          placeholderTextColor={colors.gray2}
           secureTextEntry={secureText}
           spellCheck={spellCheck}
         />

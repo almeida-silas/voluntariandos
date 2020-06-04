@@ -5,23 +5,21 @@ import colors from '../../styles/colors';
 const styles = StyleSheet.create({
   container: {
     width: '95%',
-    height: 120,
+    height: 110,
     padding: 15,
     marginBottom: 13,
     borderWidth: 2,
     borderRadius: 5,
     flexWrap: 'wrap',
     justifyContent: 'center',
-    backgroundColor: '#3B3B51',
     borderColor: colors.gray2,
-    shadowColor: '#000',
+    shadowColor: colors.black,
     shadowOffset: {
       width: 0,
       height: 5,
     },
     shadowOpacity: 0.34,
     shadowRadius: 6.27,
-
     elevation: 10,
   },
   containerIcons: {
@@ -37,9 +35,9 @@ const styles = StyleSheet.create({
     color: colors.light,
   },
   imageProfile: {
-    width: 80,
-    height: 80,
-    borderRadius: 50,
+    width: 75,
+    height: 75,
+    borderRadius: 40,
     marginVertical: '100%',
     backgroundColor: colors.light,
   },
@@ -50,7 +48,7 @@ const styles = StyleSheet.create({
   },
   button: {
     position: 'absolute',
-    backgroundColor: '#FFFF',
+    backgroundColor: colors.light,
     alignSelf: 'flex-end',
   },
 });
