@@ -1,8 +1,6 @@
 import React, { createContext, useState, useEffect } from 'react';
 import AsyncStorage from '@react-native-community/async-storage';
 
-import { api } from '../services/auth';
-
 interface IAuthContextData {
   signed: boolean;
   user: object | null;
@@ -20,9 +18,20 @@ const AuthContext = createContext<IAuthContextData>({} as IAuthContextData);
 export const AuthProvider: React.FC = ({ children }) => {
   const [user, setUser] = useState<IUser | null>(null);
 
+  const loadStoragedData = async () => {
+    try {
+      const storageUser = await AsyncStorage.getItem('@Auth:user');
+      const storageToken = await AsyncStorage.getItem('@Auth:token');
+
+      if (storageUser && storageToken) {
+        setUser(JSON.parse(storageUser));
+      }
+    } catch (error) {}
+  };
+
   const signIn = async (userLogin: IUser) => {
     if (userLogin.email && userLogin.password) {
-      const response = api;
+      const response = { user: {}, token: '' };
 
       try {
         await AsyncStorage.setItem('@Auth:user', JSON.stringify(response.user));
@@ -43,17 +52,6 @@ export const AuthProvider: React.FC = ({ children }) => {
   }
 
   useEffect(() => {
-    async function loadStoragedData() {
-      try {
-        const storageUser = await AsyncStorage.getItem('@Auth:user');
-        const storageToken = await AsyncStorage.getItem('@Auth:token');
-
-        if (storageUser && storageToken) {
-          setUser(JSON.parse(storageUser));
-        }
-      } catch (error) {}
-    }
-
     loadStoragedData();
   }, []);
 
