@@ -5,7 +5,7 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 
 import Feed from '../pages/Feed';
 import Maps from '../pages/Maps';
-import Talk from '../pages/Talk';
+import Conversations from '../pages/Conversations';
 import Institutions from '../pages/Institutions';
 
 import DrawerContent from '../utils/DrawerContent';
@@ -26,7 +26,7 @@ const Home: React.FC = () => {
         initialRouteName="Feed"
         backBehavior="initialRoute"
         shifting={true}
-        activeColor={colors.gray2}
+        activeColor={colors.primary}
         barStyle={styles.container}
         sceneAnimationEnabled={false}>
         <TabNavigator.Screen
@@ -38,8 +38,8 @@ const Home: React.FC = () => {
           }}
         />
         <TabNavigator.Screen
-          name="talk"
-          component={Talk}
+          name="conversations"
+          component={Conversations}
           options={{
             title: 'Conversas',
             tabBarIcon: 'chat',
