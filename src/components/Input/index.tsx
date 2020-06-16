@@ -6,7 +6,7 @@ import colors from '../../styles/colors';
 import styles from './styles';
 
 interface Props {
-  onChangeText?: Function;
+  onChangeText?: (((text: string) => void) & Function) | undefined;
   value?: string;
   label?: string;
   secureText?: boolean;
