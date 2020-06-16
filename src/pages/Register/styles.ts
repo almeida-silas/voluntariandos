@@ -1,9 +1,6 @@
-import { StyleSheet, Dimensions } from 'react-native';
+import { StyleSheet } from 'react-native';
 
 import colors from '../../styles/colors';
-
-const { height, width } = Dimensions.get('window');
-console.log(height, width);
 
 const styles = StyleSheet.create({
   container: {
@@ -21,7 +18,7 @@ const styles = StyleSheet.create({
   containerButtons: {
     width: '80%',
     flexDirection: 'row',
-    justifyContent: 'center',
+    justifyContent: 'space-between',
   },
   containerBottom: {
     bottom: -10,

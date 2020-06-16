@@ -1,6 +1,5 @@
 import { StyleSheet } from 'react-native';
-
-import colors from '../../../styles/colors';
+import colors from '../../styles/colors';
 
 const styles = StyleSheet.create({
   container: {
@@ -9,10 +8,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     backgroundColor: colors.primary,
   },
-  containerButtons: {
-    width: '80%',
-    flexDirection: 'row',
-    justifyContent: 'center',
+  message: {
+    color: colors.light,
   },
 });
 

@@ -1,64 +1,56 @@
-import React from 'react';
-import { View, ScrollView } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { View, FlatList, Text, Alert } from 'react-native';
 
-import Card from '../../components/Card';
+import Card from './Card';
+import { IRequirements } from '../../interfaces/IRequirements';
+
 import styles from './styles';
 
-const image = {
-  uri: '',
-};
+import api from '../../services/api';
 
 const Feed: React.FC = () => {
+  const [requirements, setRequirements] = useState<IRequirements[]>([]);
+  const [refreshing, setRefreshing] = useState(false);
+
+  useEffect(() => {
+    async function loadInstitutions() {
+      try {
+        //const response = await api.get('/requirements');
+
+        //setRequirements(response.data);
+
+        setRefreshing(false);
+      } catch (error) {
+        setRefreshing(false);
+
+        Alert.alert(
+          'Houve um erro ao buscar os dados!',
+          'Houve um erro ao buscar as petições das intituições. Verifique sua conexão',
+        );
+      }
+    }
+
+    loadInstitutions();
+  }, [refreshing]);
+
   return (
-    <ScrollView style={styles.container}>
-      <View style={styles.cardsBody}>
-        <Card
-          imageProfile={image}
-          name="Orn Mart"
-          description="A new volunter"
-          content="SAdasd"
-          navigateTo="Maps"
+    <View style={styles.container}>
+      {requirements.length ? (
+        <FlatList
+          data={requirements}
+          refreshing={refreshing}
+          onRefresh={() => setRefreshing(true)}
+          showsVerticalScrollIndicator={false}
+          renderItem={({ item: requirement }) => (
+            <Card requirement={requirement} />
+          )}
         />
-
-        <Card
-          imageProfile={image}
-          name="Orn Mart"
-          description="A new volunter"
-          content="SAdasd"
-          navigateTo="Maps"
-        />
-
-        <Card
-          imageProfile={image}
-          name="Orn Mart"
-          description="A new volunter"
-          content="SAdasd"
-          navigateTo="Maps"
-        />
-
-        <Card
-          imageProfile={image}
-          name="Orn Mart"
-          description="A new volunter"
-          content="SAdasd"
-          navigateTo="Maps"
-        />
-        <Card
-          imageProfile={image}
-          name="Orn Mart"
-          description="A new volunter"
-          content="SAdasd"
-          navigateTo="Maps"
-        />
-        <Card
-          imageProfile={image}
-          name="Orn Mart"
-          description="A new volunter"
-          content="SAdasd"
-          navigateTo="Maps"
-        />
-      </View>
-    </ScrollView>
+      ) : (
+        <Text style={styles.message}>
+          Nenhuma solicitação das instituição aberta
+        </Text>
+      )}
+    </View>
   );
 };
 

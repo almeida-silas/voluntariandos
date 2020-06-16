@@ -10,7 +10,7 @@ const styles = StyleSheet.create({
   },
   carousel: {
     marginTop: 20,
-    height: '50%',
+    height: '45%',
     justifyContent: 'center',
     alignItems: 'center',
   },

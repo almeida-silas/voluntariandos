@@ -4,11 +4,13 @@ import colors from '../../styles/colors';
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    padding: 10,
+    alignItems: 'center',
+    justifyContent: 'center',
     backgroundColor: colors.primary,
   },
-  cardsBody: {
-    marginTop: 25,
-    alignItems: 'center',
+  message: {
+    color: colors.light,
   },
 });
 

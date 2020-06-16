@@ -8,7 +8,6 @@ import { useAuth } from '../../hooks/auth';
 import Logo from '../../components/Logo';
 import Button from '../../components/Button';
 import Input from '../../components/Input';
-import ContainerLink from '../../components/ContainerLink';
 import styles from './styles';
 
 const Login: React.FC = () => {
@@ -36,8 +35,9 @@ const Login: React.FC = () => {
         label="E-mail"
         value={email}
         maxLength={250}
-        onChange={setEmail}
-        placeholder="email@example.com"
+        onChangeText={setEmail}
+        autoCorrect={false}
+        keyboardType="email-address"
       />
 
       <Input
@@ -45,11 +45,10 @@ const Login: React.FC = () => {
         value={password}
         maxLength={80}
         secureText={true}
-        onChange={setPassword}
-        placeholder="*********"
+        onChangeText={setPassword}
       />
 
-      <Button submit={handdleLogin}>Entrar</Button>
+      <Button onPress={handdleLogin}>Entrar</Button>
 
       <View style={styles.containerRegister}>
         <Text style={styles.textRegister}>Não Tem uma conta? </Text>
@@ -60,9 +59,13 @@ const Login: React.FC = () => {
       </View>
 
       <View style={styles.containerBottom}>
-        <ContainerLink onPress={() => {}} link="AJUDA">
-          PROBLEMAS NO LOGIN?
-        </ContainerLink>
+        <View style={styles.top}>
+          <Text style={styles.text}> PROBLEMAS NO LOGIN?</Text>
+        </View>
+
+        <TouchableOpacity style={styles.button} onPress={() => {}}>
+          <Text style={styles.textLink}>AJUDA</Text>
+        </TouchableOpacity>
       </View>
     </View>
   );
