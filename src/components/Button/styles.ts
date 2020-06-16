@@ -4,19 +4,22 @@ import colors from '../../styles/colors';
 
 const styles = StyleSheet.create({
   container: {
-    margin: 5,
-    height: 35,
-    width: '50%',
+    marginTop: 5,
     borderRadius: 20,
-    paddingHorizontal: 20,
-    backgroundColor: colors.secundary,
-    justifyContent: 'center',
     alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: colors.secundary,
   },
-  buttonText: {
-    color: colors.light,
-    fontWeight: '900',
+  containerOutline: {
+    marginTop: 5,
+    borderRadius: 20,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderColor: colors.secundary,
+  },
+  button: {
+    alignSelf: 'center',
+    height: 35,
   },
 });
-
 export default styles;

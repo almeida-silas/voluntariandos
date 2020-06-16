@@ -4,8 +4,7 @@ import colors from '../../styles/colors';
 const styles = StyleSheet.create({
   container: {
     height: '100%',
-    width: '55%',
-    padding: 20,
+    width: '45%',
     alignSelf: 'center',
     alignItems: 'center',
     borderRadius: 20,
@@ -24,12 +23,12 @@ const styles = StyleSheet.create({
     color: colors.primary,
   },
   activeDot: {
-    width: 35,
+    width: 20,
     height: 3.5,
     backgroundColor: colors.light,
   },
   inactiveDot: {
-    width: 50,
+    width: 20,
     height: 3,
     borderRadius: 0,
     marginHorizontal: -20,

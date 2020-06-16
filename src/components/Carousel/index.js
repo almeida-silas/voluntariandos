@@ -25,7 +25,7 @@ export default function Carousel({ itens = [] }) {
         itemWidth={500}
         renderItem={_renderItem}
         onSnapToItem={(index) => setActiveSlide(index)}
-        layout={'stack'}
+        layout="stack"
         layoutCardOffset={itens.length}
       />
 

@@ -1,17 +1,34 @@
 import React from 'react';
-import { Text, TouchableOpacity } from 'react-native';
+import { Button as ButtonPaper } from 'react-native-paper';
 
+import colors from '../../styles/colors';
 import styles from './styles';
 
 interface Props {
-  submit?(): void;
+  onPress?(): void;
+  icon?: string;
+  mode?: 'text' | 'outlined' | 'contained' | undefined;
+  width?: number;
 }
 
-const Button: React.FC<Props> = ({ children, submit }) => {
+const Button: React.FC<Props> = ({
+  children,
+  mode = 'contained',
+  icon,
+  width = 170,
+  onPress,
+}) => {
   return (
-    <TouchableOpacity style={[styles.container]} onPress={submit}>
-      <Text style={styles.buttonText}>{children}</Text>
-    </TouchableOpacity>
+    <ButtonPaper
+      accessibilityStates
+      style={mode === 'outlined' ? styles.containerOutline : styles.container}
+      contentStyle={[styles.button, { width }]}
+      icon={icon}
+      mode={mode}
+      color={colors.light}
+      onPress={onPress}>
+      {children}
+    </ButtonPaper>
   );
 };
 
