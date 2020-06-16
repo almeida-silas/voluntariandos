@@ -27,13 +27,12 @@ const Home: React.FC = () => {
         backBehavior="initialRoute"
         shifting={true}
         activeColor={colors.primary}
-        barStyle={styles.container}
-        sceneAnimationEnabled={false}>
+        barStyle={styles.container}>
         <TabNavigator.Screen
           name="Feed"
           component={Feed}
           options={{
-            title: 'Notícias',
+            title: 'Petições',
             tabBarIcon: 'rss',
           }}
         />
