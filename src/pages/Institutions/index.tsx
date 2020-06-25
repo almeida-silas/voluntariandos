@@ -5,7 +5,7 @@ import api from '../../services/api';
 
 import styles from './styles';
 
-import { IInstitution } from '../../interfaces/IInstitutions';
+import { IInstitution } from './IInstitutions';
 
 const Institution: React.FC = () => {
   const [institutions, setInstitution] = useState<IInstitution[]>([]);

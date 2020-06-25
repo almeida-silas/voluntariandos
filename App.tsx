@@ -4,7 +4,7 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { Provider as PaperProvider } from 'react-native-paper';
 
-import { AuthProvider } from './src/context/context';
+import { AuthProvider } from './src/context/auth';
 import theme from './src/styles/theme';
 
 import Routes from './src/routes';

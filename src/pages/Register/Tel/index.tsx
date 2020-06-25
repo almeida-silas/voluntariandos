@@ -3,10 +3,10 @@ import { View } from 'react-native';
 
 import { useNavigation } from '@react-navigation/native';
 
-import Button from '../../../../components/Button';
-import Input from '../../../../components/Input';
+import Button from '../../../components/Button';
+import Input from '../../../components/Input';
 
-import parentStyle from '../../styles';
+import parentStyle from '../styles';
 
 const Tel: React.FC = () => {
   const navigation = useNavigation();

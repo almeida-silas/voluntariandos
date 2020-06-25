@@ -6,7 +6,7 @@ import Main from '../pages/Main';
 import Login from '../pages/Login';
 import Register from '../pages/Register';
 import RegisterPhysical from '../pages/Register/RegisterPhysical';
-import RegisterPhysicalTel from '../pages/Register/RegisterPhysical/Tel';
+import RegisterTel from '../pages/Register/Tel';
 
 const StackNavigaton = createStackNavigator();
 
@@ -22,7 +22,7 @@ const AuthRoutes: React.FC = () => {
       />
       <StackNavigaton.Screen
         name="Register-physical-number"
-        component={RegisterPhysicalTel}
+        component={RegisterTel}
       />
     </StackNavigaton.Navigator>
   );

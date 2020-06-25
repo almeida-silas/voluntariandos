@@ -1,16 +1,14 @@
 import React, { createContext, useState, useEffect } from 'react';
 import AsyncStorage from '@react-native-community/async-storage';
+import api from '../services/api';
+
+import { IAuthUser, IUser } from './IUser';
 
 interface IAuthContextData {
   signed: boolean;
   user: object | null;
-  signIn(user: IUser): Promise<boolean>;
+  signIn(user: IAuthUser): Promise<boolean>;
   signOut(): void;
-}
-
-export interface IUser {
-  email: string;
-  password: string;
 }
 
 const AuthContext = createContext<IAuthContextData>({} as IAuthContextData);
@@ -29,18 +27,23 @@ export const AuthProvider: React.FC = ({ children }) => {
     } catch (error) {}
   };
 
-  const signIn = async (userLogin: IUser) => {
-    if (userLogin.email && userLogin.password) {
-      const response = { user: {}, token: '' };
+  const signIn = async (authUser: IAuthUser) => {
+    if (authUser.email && authUser.password) {
+      const response = await api.post<IUser>('/signin', {
+        email: authUser.email,
+        password: authUser.password,
+      });
 
       try {
-        await AsyncStorage.setItem('@Auth:user', JSON.stringify(response.user));
-        await AsyncStorage.setItem('@Auth:token', response.token);
+        await AsyncStorage.setItem('@Auth:user', JSON.stringify(response.data));
+        await AsyncStorage.setItem('@Auth:token', 'token');
 
-        setUser(userLogin);
+        setUser(response.data);
 
         return true;
-      } catch (error) {}
+      } catch (error) {
+        return false;
+      }
     }
     return false;
   };

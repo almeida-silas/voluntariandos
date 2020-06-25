@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { View } from 'react-native';
 
 import { useNavigation } from '@react-navigation/native';
+import { Picker } from '@react-native-community/picker';
+
 import Button from '../../components/Button';
 import Input from '../../components/Input';
 import styles from './styles';
@@ -18,14 +20,12 @@ const Register: React.FC = () => {
       navigation.navigate('Register-physical');
     }
   };
-
   const navigateBack = () => {
     navigation.goBack();
   };
 
   return (
     <View style={styles.container}>
-      <Input onChangeText={setIsJuridical} />
       <Input
         value={email}
         onChangeText={setEmail}
