@@ -28,6 +28,8 @@ const Main: React.FC = () => {
 
   return (
     <View style={styles.container}>
+      <Logo />
+
       <View style={styles.carousel}>
         <Carousel itens={[data, data, data]} />
       </View>

@@ -27,6 +27,7 @@ const Login: React.FC = () => {
 
   return (
     <View style={styles.container}>
+      <Logo />
       <View style={styles.div} />
 
       <Input
