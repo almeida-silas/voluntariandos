@@ -34,12 +34,12 @@
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code
+Please read [CONTRIBUTING](CONTRIBUTING.md) for details on our code
 of conduct, and the process for submitting pull requests to us.
 
 ## Changelog
 
-All notable changes to this project will be documented in this file [CHANGELOG.md](CHANGELOG.md).
+All notable changes to this project will be documented in this file [CHANGELOG](CHANGELOG.md).
 
 ## License
 
