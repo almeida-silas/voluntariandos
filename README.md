@@ -9,7 +9,7 @@
   <p align="center">
     An open source project to help institutions in the search for volunteers and communication between the two.
     <br />
-    <a href="https://github.com/s1lasjee/voluntariandos/README.md"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/s1lasjee/voluntariandos"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://github.com/s1lasjee/voluntariandos/issues">Report Bug</a>
