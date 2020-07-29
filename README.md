@@ -1,36 +1,44 @@
-<br />
-<p align="center">
+<h1 align="center">
+  <br />
   <a href="https://github.com/s1lasjee/voluntariandos">
-    <img src="./src/assets/svg/Logo.svg" alt="Logo" width="100" height="100">
+    <img src="./src/assets/svg/Logo.svg" alt="Logo" width="190">
   </a>
+  <br />
+  <br />
+  Voluntariandos
+</h1>
 
-  <h3 align="center">Voluntariandos</h3>
+<p align="center">An open source project to help institutions in the search for volunteers and communication between the two.</p>
 
-  <p align="center">
-    An open source project to help institutions in the search for volunteers and communication between the two.
-    <br />
-    <a href="https://github.com/s1lasjee/voluntariandos"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/s1lasjee/voluntariandos/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/s1lasjee/voluntariandos/issues">Request Feature</a>
-  </p>
+<p align="center">
+  <a href="https://opensource.org/licenses/MIT">
+    <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License MIT">
+  </a>
+  <br />
+  <a href="https://github.com/s1lasjee/voluntariandos"><strong>Explore the docs »</strong></a>
+  <br />
+  <br />
+  <a href="https://github.com/s1lasjee/voluntariandos/issues">Report Bug</a>
+  ·
+  <a href="https://github.com/s1lasjee/voluntariandos/issues">Request Feature</a>
 </p>
 
 ## Summary
-
+  - [Features](#features)
   - [Getting Started](#getting-started)
   - [Contributing](#contributing)
   - [Changelog](#changelog)
   - [License](#license)
 
+## Features
+This app features all the latest tools and practices in mobile development!
+- ⚛️ **React Native** — A lib that provides a way to create native apps for Android and iOS
+
 ## Getting Started
 
-1. clone this repo using `git clone https://github.com/s1lasjee/voluntariandos.git`
+1. Clone this repo using `git clone https://github.com/s1lasjee/voluntariandos.git`
 2. Move yourself to the appropriate directory: `cd voluntariandos`
 3. Run `yarn` to install dependencies
-2. Run `yarn start`
 
 ## Contributing
 
