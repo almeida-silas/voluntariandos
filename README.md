@@ -24,14 +24,17 @@
 </p>
 
 ## Summary
-  - [Features](#features)
-  - [Getting Started](#getting-started)
-  - [Contributing](#contributing)
-  - [Changelog](#changelog)
-  - [License](#license)
+
+- [Features](#features)
+- [Getting Started](#getting-started)
+- [Contributing](#contributing)
+- [Changelog](#changelog)
+- [License](#license)
 
 ## Features
+
 This app features all the latest tools and practices in mobile development!
+
 - ⚛️ **React Native** — A lib that provides a way to create native apps for Android and iOS
 
 ## Getting Started
