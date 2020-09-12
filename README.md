@@ -54,4 +54,4 @@ All notable changes to this project will be documented in this file [CHANGELOG](
 
 ## License
 
-Distributed under the MIT License. See [LICENSE](LICENSE.md) for more information.
+Distributed under the MIT License. See [LICENSE](LICENSE) for more information.
