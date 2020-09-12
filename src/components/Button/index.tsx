@@ -20,7 +20,6 @@ const Button: React.FC<Props> = ({
 }) => {
   return (
     <ButtonPaper
-      accessibilityStates
       style={mode === 'outlined' ? styles.containerOutline : styles.container}
       contentStyle={[styles.button, { width }]}
       icon={icon}

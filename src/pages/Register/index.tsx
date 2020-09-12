@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { View } from 'react-native';
 
 import { useNavigation } from '@react-navigation/native';
-import { Picker } from '@react-native-community/picker';
 
 import Button from '../../components/Button';
 import Input from '../../components/Input';

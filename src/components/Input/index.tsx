@@ -45,7 +45,6 @@ const Input: React.FC<Props> = ({
     <View style={styles.container}>
       <View style={styles.containerInput}>
         <TextInput
-          accessibilityStates
           label={label}
           value={value}
           onChangeText={onChangeText}

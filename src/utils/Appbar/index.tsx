@@ -15,9 +15,8 @@ const Appbar: React.FC = () => {
   };
 
   return (
-    <AppbarModal.Header accessibilityStates style={styles.containerTop}>
+    <AppbarModal.Header style={styles.containerTop}>
       <AppbarModal.Action
-        accessibilityStates
         icon={() => <Icon name="menu" style={styles.icon} />}
         onPress={openDrawer}
       />

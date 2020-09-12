@@ -16,9 +16,8 @@ const DrawerContent: React.FC<IProps> = (props) => {
 
   return (
     <DrawerContentScrollView {...props} style={styles.container}>
-      <Drawer.Section accessibilityStates>
+      <Drawer.Section>
         <Avatar.Image
-          accessibilityStates
           style={styles.avatar}
           source={{
             uri:
@@ -33,28 +32,24 @@ const DrawerContent: React.FC<IProps> = (props) => {
         <Drawer.Item
           style={styles.itens}
           label="Meu Perfil"
-          accessibilityStates
           icon={() => <Icon name="edit" style={styles.icon} />}
           onPress={() => {}}
         />
         <Drawer.Item
           style={styles.itens}
           label="Candidaturas"
-          accessibilityStates
           icon={() => <Icon name="clock" style={styles.icon} />}
           onPress={() => {}}
         />
         <Drawer.Item
           style={styles.itens}
           label="Configuração"
-          accessibilityStates
           icon={() => <Icon name="settings" style={styles.icon} />}
           onPress={() => {}}
         />
         <Drawer.Item
           style={styles.itens}
           label="Sair"
-          accessibilityStates
           icon={() => <Icon name="log-out" style={styles.icon} />}
           onPress={signOut}
         />
